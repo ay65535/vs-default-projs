@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Newtonsoft.Json;
+using System;
 
 namespace ConsoleAppNet48
 {
@@ -10,6 +7,12 @@ namespace ConsoleAppNet48
     {
         static void Main(string[] args)
         {
+            Product product = new Product();
+            product.Name = "Apple";
+            product.Expiry = new DateTime(2008, 12, 28);
+            product.Sizes = new string[] { "Small" };
+
+            string json = JsonConvert.SerializeObject(product);
         }
     }
 }
