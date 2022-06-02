@@ -1,2 +1,11 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿// https://www.newtonsoft.com/json
+
+using ConsoleAppNet6;
+using Newtonsoft.Json;
+
+Product product = new Product();
+product.Name = "Apple";
+product.Expiry = new DateTime(2008, 12, 28);
+product.Sizes = new string[] { "Small" };
+
+string _ = JsonConvert.SerializeObject(product);
